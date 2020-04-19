@@ -1,0 +1,250 @@
+body {
+  font-family: 'Arimo',Arial, sans-serif ;
+  background-color: #000000;
+  color: #ffffff
+}
+
+h1, .welcome-player, .game-start {
+  text-align: center;
+  color: #FF7B10;
+}
+
+h1 i {
+font-size: :1.5rem;
+color:#F0DB4F;
+}
+
+.gameplay-container, .hit-stand-btns {
+  display: none;
+}
+
+.game-restart {
+  display: none;
+  /* starts as hidden */
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  width: 100px;
+  height: 50px;
+  margin-left: -50px;
+  /* -1/2 width */
+  margin-top: -50px;
+  /* -1/2 height */
+}
+
+.game-start {
+  /* display: block; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 200px;
+  margin-left: -150px;
+  /* -1/2 width */
+  margin-top: -150px;
+  /* -1/2 height */
+  border: 2px solid #FF7B10;
+}
+
+.name-form>* {
+  margin: 20px;
+}
+
+/* For styling the label */
+.name-form:first-child {
+  font-size: 1.5rem;
+}
+
+#player-name {
+  border-radius: 5px;
+  font-size: 1.75rem;
+  color: #FF7B10;
+  height: 40px;
+  width: 250px;
+}
+
+.card-stacks {
+  margin: auto;
+  width: 100%;
+}
+
+.card-stacks div {
+  float: left;
+}
+
+.card-headers, .hit-stand-btns {
+  clear: both;
+  padding: 10px;
+  color: #FF7B10;
+}
+
+.hit-stand-btns button {
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  top: 50%;
+  font-size: 1.5rem;
+  color: #FF7B10;
+  font: #FF7B10;
+}
+
+#game-start-btns {
+  display: none;
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.centered-overlay-content button, .game-restart button ,#game-start-btns-form {
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  position: relative;
+  font-size: 1.5rem;
+  color: #FF7B10;
+  font: #FF7B10;
+}
+
+.score-display {
+  clear: both;
+}
+
+.card {
+  margin: 10px;
+}
+
+.card img {
+  height: 150px;
+  width: 90px;
+}
+
+button span {
+  padding-left: 20px;
+}
+
+button,input {
+  font-family: 'Arimo',Arial, sans-serif ;
+}
+
+#overlay {
+  margin: 100px 100px 100px 100px;
+  position: fixed;
+  display: none;
+  width: 80%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FF7B10;
+  ;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.centered-overlay-content {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+#outcome-info-text, #outcome-player-text, #outcome-dealer-text, #play-again-btn, #float-right-icon {
+  margin: auto;
+  padding: 10px;
+  font-size: 1.5rem;
+  /*position: relative;*/
+}
+
+#outcome-info-text {
+  /*margin: 50px auto auto auto;*/
+  font-size: 3.0rem;
+}
+
+#play-again-btn {
+  padding: 10px 40px;
+}
+
+.close-overlay {
+  float: right;
+}
+
+.close-overlay img {
+  height: 30px;
+  width: 30px;
+}
+
+.scoreboard {
+  display: none;
+}
+
+.scoreboard p {
+  color: #FF7B10;
+}
+
+.commentary-box {
+  height: 350px;
+  display: none;
+  width: inherit;
+  padding: 3px;
+  background: #FF7B10;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.commentary-panel {
+  height: 323px;
+  overflow: auto;
+  background-color: #000000;
+  font-size: 1.0rem;
+}
+
+.commentary-panel {
+  font-size: 0.75rem;
+}
+
+.commentary-title {
+  margin: 0px;
+}
+
+/*Building a grid box for a 4 part layout*/
+.gameplay-container {
+  grid-area: game;
+}
+
+.scoreboard {
+  grid-area: score;
+}
+
+.commentary-box {
+  grid-area: comment;
+}
+
+.hit-grid {
+  grid-area: hit;
+}
+
+.stand-grid {
+  grid-area: stand;
+}
+
+.grid-container {
+  clear: both;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "game game game game game hit score score score score"
+    "game game game game game hit comment comment comment comment"
+    "game game game game game stand comment comment comment comment"
+    "game game game game game stand comment comment comment comment"
+}

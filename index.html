@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>BlackJSack</title>
+  <script src="https://kit.fontawesome.com/961ad39d09.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+
+  <h1>Black<i>JS</i>ack</h1>
+
+  <div class="game-restart">
+    <button onclick="startGame(2,event)" type="button" name="button"><i class="fas fa-play"></i><span>Play again</span></button>
+  </div>
+
+
+  <div class="game-start">
+    <form onsubmit="startGame(2,event)" class="name-form" autocomplete="off">
+      <label for="playername">Enter your name</label>
+      <input id="player-name" type="text" name="playername" required>
+      <input id="game-start-btns-form" type="submit" value="Start Game!">
+    </form>
+
+
+  </div>
+
+
+  <div class="grid-container">
+
+
+    <div class="gameplay-container">
+
+      <h2 class="card-headers">Dealer's Cards (Score: <span id="dealer-score-display">0</span>)</h2>
+      <div class="dealer-hand card-stacks">
+
+      </div>
+
+
+      <h2 class="card-headers"><span class="player-card-headers"></span> Cards (Score: <span id="player-score-display">0</span>)</h2>
+
+      <div class="player-hand card-stacks">
+
+
+      </div>
+
+
+    </div>
+
+    <div class="hit-stand-btns hit-grid">
+      <button id="hit-btn" onclick="hitPlayer(player)" type="button" name="button" display="block"><i class="fas fa-hammer"></i><span>Hit</span></button>
+    </div>
+
+    <div class="hit-stand-btns stand-grid">
+      <button id="stand-btn" onclick="standPlayer(player)" type="button" name="button" display="block"><i class="far fa-hand-paper"></i><span>Stand</span></button>
+    </div>
+
+    <div class="scoreboard">
+      <p>Total games won by player is : <span id="player-scoreboard">0</span></p>
+      <p>Total games won by dealer is : <span id="dealer-scoreboard">0</span></p>
+    </div>
+
+    <div class="commentary-box">
+      <h2 class="commentary-title">Commentary:</h2>
+
+      <div class="commentary-panel">
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="overlay">
+    <div class="close-overlay" onclick="overlayOff()">
+      <img src="img/close-overlay.png" alt="">
+    </div>
+    <div class="centered-overlay-content">
+      <div id="outcome-info-text"></div>
+      <div id="outcome-player-text"></div>
+      <div id="outcome-dealer-text"></div>
+      <br>
+      <br>
+      <br>
+      <button type="button" name="button" onclick="comboStartGame(2,event)"><i class="fas fa-play"></i><span>Play again</span></button>
+    </div>
+  </div>
+
+</body>
+
+</html>
