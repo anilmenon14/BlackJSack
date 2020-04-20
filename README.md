@@ -1,4 +1,4 @@
-![Screenshot of game](/img/gamesnippet.png)
+![Screenshot of game](img/gamesnippet.PNG)
 
 ## Features of game:
 
